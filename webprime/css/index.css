@@ -1,0 +1,91 @@
+/* Configuração: Geral */
+:root {
+    font-size: 16px;
+    --branco: #f1f1f1;
+    --amarelo: #FDB827;
+    --azul: #21209c;
+    --preto: #000000;
+}
+
+body {
+    color: var(--branco);
+    background: url(/img/bg-projeto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Configuração: Seção */
+.conteudo01 {
+    transition: 0.5;
+    position: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 10%;
+    flex-wrap: wrap;
+    margin: 1rem;
+    padding: 1rem 1rem;
+    background: rgba(90, 90, 90, 0.0,5);
+    border-radius: 1.5rem;
+}
+
+.conteudo01 img {
+    width: 25rem;
+    height: auto;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.5s;
+}
+
+.conteudocard {
+    text-align: center;
+    font-size: x-large;
+    overflow: hidden;
+    -moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.5s;
+}
+
+.conteudocard h1, p {
+    margin: 0 0 1rem;
+}
+
+.conteudocard p {
+    font-family: "Ledger-Regular";
+}
+.conteudocard h1 {
+    font-family: "DavidLibre-Regular";
+}
+
+.conteudocard ul {
+    margin-bottom: 1rem;
+}
+.conteudocard li {
+    display: block; 
+    border-radius: 0.5rem;
+    font-family: 'Forum-Regular';
+}
+
+.conteudocard:hover {
+    transition: .5s;
+    transform: scale(1.15);
+}
+
+.conteudo01 img:hover {
+    transition: .5s;
+    transform: scale(1.15);
+
+}
+
+/* Configuração: Mobile */
+@media (max-width: 600px) {
+    .conteudocard {
+        margin: 1rem 1rem;
+        padding: 0.4rem;
+        font-size: 1.5rem;
+    }
+
+    .conteudo01 img {
+        width: 14.5rem;
+    }
+}

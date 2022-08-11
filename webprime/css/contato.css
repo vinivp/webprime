@@ -1,0 +1,38 @@
+/* Configuração: Geral */
+:root {
+    font-size: 16px;
+    --branco: #f1f1f1;
+    --amarelo: #FDB827;
+    --azul: #21209c;
+    --preto: #000000;
+}
+
+body {
+    color: var(--branco);
+    background: url(/img/bg-projeto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card_contato {
+   text-align: center;
+   padding: 4.8rem;
+}
+
+.card_contato h2 {
+   margin-top: 0.5rem;
+}
+
+.card_contato h5 {
+    margin-top: 0.5rem;
+}
+
+#btn-msg {
+    color: var(--branco);
+    background: var(--preto);
+    border: solid var(--amarelo) 1px;
+    padding: 0.5rem;
+    border-radius: 15%;
+    position:absolute;
+    margin: 0 -4rem;
+}
