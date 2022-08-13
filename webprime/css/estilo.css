@@ -25,13 +25,14 @@
         transform: rotate(360deg);
     }
 }
+
 /* Configuração: Cabeçalho desktop */
 #header {
     width: 100%;
     box-sizing: border-box;
     background: var(--preto);
     height: 4.5rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,15 +44,6 @@
 }
 
 /*Configuração: menu do cabeçalho mobile */
-a {
-    color: var(--branco);
-    text-decoration: none;
-}
-
-a:hover {
-    background: var(--fundo);
-    color: var(--amarelo);
-}
 
 .menu {
     list-style: none;
@@ -60,6 +52,8 @@ a:hover {
 }
 
 .menu a {
+    text-decoration: none;
+    color: #f1f1f1;
     display: block;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -79,7 +73,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background: none;
+    background: var(--preto);
     height: auto;
 
     padding-top: 40px;
@@ -88,7 +82,7 @@ footer {
 
 .footer-content {
     padding-top: 0.5rem;
-    background: #000;
+    background: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,43 +106,79 @@ footer {
     color: #cacdd2;
 }
 
-.socials {
+/* ======================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+.icons {
     list-style: none;
     display: flex;
+    column-gap: 25px;
+}
+
+.icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0 3rem 0;
-}
-
-.socials li {
-    margin: 0 10px;
-}
-
-.socials a {
     text-decoration: none;
+    font-size: 26px;
     color: #fff;
-    border: 1.1px solid white;
-    padding: 5px;
-
     border-radius: 50%;
-
+    outline: 2px solid #fff;
+    transition-property:
+        outline-offset, outline-color,
+        background-color;
+    transition-duration: .25s;
 }
 
-.socials a i {
-    font-size: 1.1rem;
-    width: 20px;
-
-
-    transition: color .4s ease;
-
+.icon:hover {
+    outline-offset: 4px;
 }
 
-.socials a:hover i {
-    color: aqua;
+.icon:hover i {
+    animation: shake .25s;
+}
+
+.icon--instagram:hover {
+    background-image: radial-gradient(circle at 30% 107%,
+            #fdf497 0%, #fdf497 5%,
+            #fd5949 45%, #d6249f 60%,
+            #285AEB 90%);
+    outline-color: #a02d76;
+}
+
+.icon--facebook:hover {
+    background-color: #0077b5;
+    outline-color: #0077b5;
+}
+
+.icon--whatsapp:hover {
+    background-color: #2ea44f;
+    outline-color: #2ea44f;
+}
+
+@keyframes shake {
+    10% {
+        transform: rotate(15deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-15deg);
+    }
 }
 
 .footer-bottom {
-    background: #000;
+    background: var(--preto);
     padding: 20px;
     padding-bottom: 40px;
     text-align: center;
@@ -186,16 +216,8 @@ footer {
     display: block;
 }
 
-.footer-menu ul li a {
-    color: #cfd2d6;
-    text-decoration: none;
-}
-
-.footer-menu ul li a:hover {
-    color: var(--amarelo);
-}
-
 @media (max-width: 600px) {
+
     /* Configuração: Imagem header */
     #header img {
         width: 13.5rem;
@@ -277,12 +299,13 @@ footer {
     .footer-menu ul {
         display: flex;
     }
-    
+
     .footer-content h3 {
         font-size: 1.5rem;
     }
 
-    .footer-bottom p, .footer-menu{
-        font-size: 0.6rem;
+    .footer-bottom p,
+    .footer-menu {
+        font-size: 0.99rem;
     }
 }

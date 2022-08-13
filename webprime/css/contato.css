@@ -15,12 +15,12 @@ body {
 }
 
 .card_contato {
-   text-align: center;
-   padding: 4.8rem;
+    text-align: center;
+    padding: 4.8rem;
 }
 
 .card_contato h2 {
-   margin-top: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .card_contato h5 {
@@ -28,11 +28,36 @@ body {
 }
 
 #btn-msg {
+    text-decoration: none;
+    font-size: 25px;
     color: var(--branco);
-    background: var(--preto);
-    border: solid var(--amarelo) 1px;
-    padding: 0.5rem;
-    border-radius: 15%;
-    position:absolute;
-    margin: 0 -4rem;
+    padding: 1rem 1rem;
+    border: 0.2rem solid var(--amarelo);
+    position: relative;
+}
+
+#btn-msg::before, #btn-msg::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: inherit;
+    transition: all .5s;
+}
+
+#btn-msg::before {
+    top: -15px;
+    left: -15px;
+    border-width: 3px 0 0 3px;
+}
+
+#btn-msg::after {
+    bottom: -15px;
+    right: -15px;
+    border-width: 0 3px 3px 0;
+}
+
+#btn-msg:hover::before, #btn-msg:hover::after {
+    width: calc(100% + 27px);
+    height: calc(100% + 27px);
 }
